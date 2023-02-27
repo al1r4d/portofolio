@@ -1,0 +1,19 @@
+<div class="sidebar">
+		<div>
+			<p><b>alif.radhitya.my.id</b></p>
+			<p><i>Sekali berarti, sesudah itu mati.</i></p>
+		</div>
+			<div class="pin"> 
+		{% include search.html %}
+	</div>
+
+	<div>
+		<h3>Kategori</h3>
+  <ul>
+    {% for category in site.tags %}
+      <li><a href="{{ site.baseurl }}/tag/{{ category | first | slugify }}.html">{{ category | first }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+</div>

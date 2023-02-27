@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="main">
+  
+
+<div class="posts">
+  {% for post in paginator.posts %}
+    <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/{{ post.tags }}.html">{{ post.tags }}</a> pada {{ post.date | date: "%-d %B %Y" }}</p>
+    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+  {% endfor %}
+</div>
+
+{% include pagination.html %}
+
+
+  </div>
+  </div>
+

@@ -1,0 +1,14 @@
+title: Alif Radhitya
+
+paginate: 3
+permalink: /:title
+paginate_path: "/weblog/page:num/"
+
+
+feed:
+  tags: true
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+include: ['_pages', '_includes', '_layout' ]

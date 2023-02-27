@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="post">
+	<h2>{{ page.tag }} </h2>
+        <p style="font-size:15px;">{{ page.description }}</p>
+	<p> Buat kamu yang mau langganan tapi bagian tag {{ page.tag }}, bisa pakai <a href="/feed/by_tag/{{ page.tag}}.xml">rss feed</a>.</p>
+        <ul>
+{% for post in site.tags[page.tag] %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
+    {{ post.description }}
+  </li>
+{% endfor %}
+</ul>
+</div>
+<hr>
+
